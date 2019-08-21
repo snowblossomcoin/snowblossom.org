@@ -1,0 +1,46 @@
+
+#logo { float: right; position: static; }
+
+body {
+  background-color:#b3f0ff; 
+  font-family: 'Droid Sans Mono'; 
+  font-weight: 100; 
+  color:#243033  }
+
+a:link {
+  color:#000000;
+  font-family: 'Droid Sans Mono'; 
+  font-weight: 100; }
+a:visited {color:#486066;}
+  
+table {
+  max-width:100%;
+  font-family: 'Droid Sans Mono';
+  border-collapse:collapse;
+  margin:1em 0;
+  font-size: 0.80em;
+  border: 1px solid black;
+}
+
+td
+{
+  border: 1px solid gray;
+  font-family: 'Droid Sans Mono';
+  background:#a1d8e6;
+  padding: 4px;
+}
+
+th
+{
+  border: 1px solid gray;
+  background:#5a7880;
+  font-family: 'Droid Sans Mono';
+  color:#ffffff;
+  padding: 4px;
+}
+
+h1 { color:#486066;}
+h3 { color:#486066;}
+li{ font-family: 'Droid Sans Mono';}
+
+
