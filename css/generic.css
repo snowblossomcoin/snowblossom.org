@@ -116,9 +116,16 @@
 	top: 1.2rem;
 }
 
-.wrapper > .container {
-	padding-top: 12rem;
-	padding-bottom: 3rem;
+.first {
+	padding-top: 12rem; 
+	padding-bottom: 2rem;
+	text-align: center;
+}
+
+.later {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	text-align: center;
 }
 
 .float-right {
@@ -149,8 +156,4 @@
 
 .button {
 	text-transform: none;
-}
-
-.content {
-	text-align: center;
 }
