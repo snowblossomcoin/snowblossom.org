@@ -72,15 +72,13 @@
 }
 
 .navigation {
-	background: #f4f5f6;
-	border-bottom: .1rem solid #d1d1d1;
 	display: block;
 	height: 7rem;
 	left: 0;
 	max-width: 100%;
 	position: fixed;
 	right: 0;
-	top: 0;
+	top: 1rem;
 	width: 100%;
 	z-index: 1;
 }
@@ -147,10 +145,6 @@
 	margin-bottom: 0;
 	margin-left: 1.7rem;
 	position: relative;
-}
-
-.svg-inline--fa {
-	color: #838fb3;
 }
 
 .button {
