@@ -117,7 +117,7 @@
 }
 
 .wrapper > .container {
-	padding-top: 9rem;
+	padding-top: 12rem;
 	padding-bottom: 3rem;
 }
 
@@ -149,4 +149,8 @@
 
 .button {
 	text-transform: none;
+}
+
+.content {
+	text-align: center;
 }
