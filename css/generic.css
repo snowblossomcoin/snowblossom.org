@@ -7,7 +7,7 @@
 		height: 14rem;
 	}
 	
-	.wrapper > .container {
+	.first {
 		padding-top: 16rem;
 	}
 	
@@ -24,7 +24,7 @@
 	
 	.button {
 		width: 100%;
-		margin-bottom: 0.1rem;
+		margin-bottom: 0.5rem;
 	}
 }
 
@@ -37,7 +37,7 @@
 		height: 21rem;
 	}
 	
-	.wrapper > .container {
+	.first {
 		padding-top: 23rem;
 	}
 	
@@ -54,7 +54,7 @@
 	
 	.button {
 		width: 100%;
-		margin-bottom: 0.1rem;
+		margin-bottom: 0.5rem;
 	}
 }
 
@@ -112,7 +112,7 @@
 }
 
 .first {
-	padding-top: 10rem; 
+	padding-top: 12rem; 
 	padding-bottom: 1rem;
 	text-align: center;
 }
