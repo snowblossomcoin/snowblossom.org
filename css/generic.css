@@ -1,0 +1,154 @@
+@media screen and (min-width: 369px) and (max-width: 620px) {
+	.wrapper .container {
+		max-width: 100%;
+	}
+	
+	.navigation {
+		height: 14rem;
+	}
+	
+	.first {
+		padding-top: 16rem;
+	}
+	
+	.navigation-list {
+		margin-left: -1.7rem;
+		list-style: none;
+		margin-bottom: 0;
+		margin-right: 0;
+	}
+	
+	.float-right {
+		float: none;
+	}
+	
+	.button {
+		width: 100%;
+		margin-bottom: 0.5rem;
+	}
+}
+
+@media screen and (max-width: 369px) {
+	.wrapper .container {
+		max-width: 100%;
+	}
+	
+	.navigation {
+		height: 21rem;
+	}
+	
+	.first {
+		padding-top: 23rem;
+	}
+	
+	.navigation-list {
+		margin-left: -1.7rem;
+		list-style: none;
+		margin-bottom: 0;
+		margin-right: 0;
+	}
+	
+	.float-right {
+		float: none;
+	}
+	
+	.button {
+		width: 100%;
+		margin-bottom: 0.5rem;
+	}
+}
+
+
+
+.wrapper {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.navigation {
+	height: 7rem;
+	left: 0;
+	max-width: 100%;
+	position: absolute;
+	right: 0;
+	top: 1rem;
+	width: 100%;
+	z-index: 1;
+}
+
+.navigation .container {
+	padding-bottom: 0;
+	padding-top: .5rem;
+}
+
+.wrapper .container {
+	max-width: 80rem;
+}
+
+.navigation .navigation-title, .title {
+	color: #67bfc3;
+	position: relative;
+	display: inline;
+    	font-family: 'Unica One', cursive;
+	font-size: 2.4rem;
+	line-height: 7rem;
+	padding: 0;
+	letter-spacing: 0.1rem;
+}
+
+.navigation strong {
+	color: #c267b8;
+	letter-spacing: 0rem;
+	font-weight: 700;
+	font-size: 2.3rem;
+}
+
+.navigation .flower {
+	height: 4.2rem;
+	position: relative;
+	top: 1.2rem;
+}
+
+.first {
+	padding-top: 12rem; 
+	padding-bottom: 1rem;
+	text-align: center;
+}
+
+.later {
+	padding-top: 1rem;
+	padding-bottom: 0;
+	text-align: center;
+}
+
+.float-right {
+	float: right;
+}
+
+.navigation .navigation-list {
+	margin-right: 0;
+	list-style: none;
+	margin-bottom: 0;
+	margin-top: 0.3rem;
+}
+
+.navigation .navigation-link {
+	display: inline;
+	font-size: 1.7rem;
+	line-height: 6.9rem;
+	padding: 0;
+	text-decoration: none;
+}
+
+.navigation .navigation-item {
+	float: left;
+	margin-bottom: 0;
+	margin-left: 1.7rem;
+	position: relative;
+}
+
+.button {
+	text-transform: none;
+}
