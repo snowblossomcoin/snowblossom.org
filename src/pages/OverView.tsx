@@ -5,7 +5,7 @@ function Overview() {
     return (
       <div className="overview main-page">
         <h1>
-          Snowblossum
+          Snowblossom
         </h1>
         <h2>
           A Fresh Take on CryptoCurrency
