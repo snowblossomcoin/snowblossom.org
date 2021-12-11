@@ -2,7 +2,7 @@ name: Build Deploy Master
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   push-master-build-deploy:
