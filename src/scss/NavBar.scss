@@ -1,0 +1,135 @@
+$light-purple: #D8D8F6;
+$purple-highlight: #B18FCF;
+
+
+
+
+.nav-empty {
+    flex: 1;
+  }
+  
+  
+.nav {
+    border-bottom: 2px solid $light-purple;
+    padding: 10px 6px;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    strong {
+        flex: 1;
+    }
+    &:hover {
+        cursor: pointer;
+        border-bottom: 2px solid $purple-highlight;
+    }
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    display: none;
+    background-color: $light-purple;
+    border-bottom: 2px solid $purple-highlight;
+    border-top: 2px solid $purple-highlight;
+    transform: translateZ(-10px);
+    @media only screen and (min-width: 768px) {
+        display: none !important;
+     }
+}
+
+.menu-open {
+    display: none;
+}
+
+.navbar {
+    position: relative;
+    transform-style: preserve-3d;
+    background-color: #D8D8F6;
+    display: flex;
+    margin: 10px 0;
+    align-items: stretch;
+    .close-dropdown {
+        display: flex;
+        flex-direction: column;
+        animation: 300ms forwards slideout;
+    }
+    
+    .open-dropdown {
+        display: flex;
+        flex-direction: column;
+        animation: 300ms forwards slidein;
+    }
+}
+
+.nav-links-container-mobile {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img {
+        color: $purple-highlight;
+        height: 30px;
+    }
+    @media only screen and (min-width: 768px) {
+       display: none;  
+    }
+}
+
+.nav-links-container-desktop {
+    display: none;
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@keyframes slidein {
+    0% {
+        top: 0;
+        opacity: 0;
+    }
+
+    69% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: .1
+    }
+
+    100% {
+        opacity: 1;
+        top: 100%;
+    }
+}
+
+@keyframes slideout {
+    0% {
+        top: 100%;
+        opacity: 1;
+    }
+
+    30% {
+        opacity: .1
+    }
+    31% {
+        opacity: 0
+    }
+
+    100% {
+        top: 0;
+        opacity: 0
+    }
+}
+
+.go-away {
+    display: none;
+}
+
+.come-back {
+    display:block
+}
+

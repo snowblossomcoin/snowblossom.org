@@ -4,6 +4,8 @@
 
 a, button /* &c... */ {
   all: unset;
+  white-space: pre-line;
+  word-wrap: break-word
 }
 
 #root {
@@ -24,36 +26,8 @@ a, button /* &c... */ {
   flex-direction: column;
 }
 
-.navbar {
-  margin: 10px 0;
-  display: flex;
-  align-items: stretch;
-}
-
 .home-icon {
   border-bottom: 2px solid #D8D8F6;
-  &:hover {
-    cursor: pointer;
-    border-bottom: 2px solid #B18FCF;
-  }
-}
-
-.nav-empty {
-  flex: 1;
-}
-
-
-.nav {
-  border-bottom: 2px solid #D8D8F6;
-  padding: 10px 6px;
-  text-decoration: none;
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  strong {
-    flex: 1;
-  }
   &:hover {
     cursor: pointer;
     border-bottom: 2px solid #B18FCF;
@@ -76,21 +50,21 @@ a, button /* &c... */ {
 }
 
 .main-page {
- padding-bottom: 70px;
- display: flex;
- flex-direction: column;
- overflow-y: scroll;
- -ms-overflow-style: none;  /* Internet Explorer 10+ */
- scrollbar-width: none;  /* Firefox */
- &::-webkit-scrollbar { 
-     display: none; 
-     width: 0 !important /* Safari and Chrome */
- }
- a {
-  text-decoration: underline;
-  color: #593F62;
-  &:hover {
-      cursor: pointer;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+  &::-webkit-scrollbar { 
+      display: none; 
+      width: 0 !important /* Safari and Chrome */
   }
-}
+  a {
+    text-decoration: underline;
+    color: #593F62;
+    &:hover {
+        cursor: pointer;
+    }
+  }
 }
