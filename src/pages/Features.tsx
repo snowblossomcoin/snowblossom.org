@@ -43,6 +43,7 @@ function Features() {
         Honestly, we don’t know if large enough quantum computers to break standard elliptic curve keys will ever be a thing.  It could be just like fusion power, always a decade or so away (<a href='https://xkcd.com/678/'>https://xkcd.com/678/</a>).  But if someone does build a powerful enough quantum computer we need to be ready.  So in Snowblossom we have two main avenues.  One is a key type which we call Q-Hard which should require a much larger quantum computer to break.  This is usable now, although at the cost of seeds don’t work with it so you need to backup your wallet file like it is the year 2010.  The other approach is that Snowblossom has a modular key system that allows for more signing methods to be easily added later.  We are closely watching the progress of the NIST Post Quantum Computing work and will add new signing algorithms as they become recommended.  Then users will have to switch to the new signing algorithms (making a new wallet) and move funds.
         </p><p>
         The roadmap for such an upgrade would be as follows:
+        </p>
         <ul>
         <li>
         NIST recommends a post-quantum algorithm for signing
@@ -56,7 +57,7 @@ function Features() {
         Proposal to adopt and allow new signing algorithm on the network is floated and voted on by the miners.  If adopted, the new signing algorithm will be allowed as a specified future block.
         </li>
         </ul>
-        </p><p>
+        <p>
         The overall speed of this process will depend on the urgency.  If Bouncy Castle folks are quick (and they probably will be) we could do this in a week or two.  However, a year is a more likely timeline.
         </p><p>
         <a href='https://wiki.snowblossom.org/index.php/Quantum_Tough'>
