@@ -8,9 +8,9 @@ import Build from './pages/Build';
 import Community from './pages/Community';
 import Error from './pages/Error';
 import { useState, useEffect } from 'react';
-import logo from './images/logo.svg';
-import menuOpen from './images/menu-down.svg';
-import menuNormal from './images/menu-button-wide-fill.svg';
+import logo from './assets/snowblossom/vectorshape_snowblossom_coin_colour.svg';
+import menuOpen from './assets/misc/menu-down.svg';
+import menuNormal from './assets/misc/menu-button-wide-fill.svg';
 
 export const pages = {
   '/overview': <Overview></Overview>,
