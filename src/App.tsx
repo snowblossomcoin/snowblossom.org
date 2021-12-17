@@ -13,24 +13,28 @@ import menuOpen from './assets/misc/menu-down.svg';
 import menuNormal from './assets/misc/menu-button-wide-fill.svg';
 
 export const pages = {
-  '/overview': <Overview></Overview>,
-  '/features': <Features/>,
-  '/build': <Build/>,
-  '/community': <Community/>,
-  '/install': <Install></Install>,
-  '/history': <History></History>,
+  '#overview': <Overview></Overview>,
+  '#features': <Features/>,
+  '#build': <Build/>,
+  '#community': <Community/>,
+  '#install': <Install></Install>,
+  '#history': <History></History>,
 }
 
 
 function App() {
 
-  const parseLocation = () => window.location.pathname || '/'
+  const parseLocation = () => window.location.hash
 
   const [page, setPage] = useState<any>(<Overview></Overview>);
 
   useEffect(() => {
-    if(parseLocation() === '/') {
-      setPage(<Overview></Overview>)
+    if (window.location.hash === "") {
+      if(window.location.pathname === '/') {
+        setPage(<Overview></Overview>)
+        return
+      }
+      setPage(<Error></Error>)
       return
     }
 
@@ -41,6 +45,31 @@ function App() {
       setPage(<Error></Error>)
     }
   }, []);
+
+  function handleNavClick(path, isMobile = false) {
+    let newPage = pages[path]
+    if(newPage) {
+      setPage(newPage)
+      window.history.replaceState(null, document.title, `/${path}`)
+    } else {
+      setPage(<Error></Error>)
+      window.history.replaceState(null, document.title, "/#error")
+    }
+    if(isMobile) {
+      resetMobileMenu()
+    }
+  }
+
+  function resetMobileMenu() {
+    const dropdown: HTMLElement = document.querySelector('.dropdown')
+    const menuOpen: HTMLImageElement = document.querySelector('.menu-open')
+    const menuNormal: HTMLImageElement = document.querySelector('.menu-normal')
+    dropdown.dataset.open = "false"
+    dropdown.classList.add('close-dropdown')
+    dropdown.classList.remove('open-dropdown')
+    menuOpen.style.display = "none"
+    menuNormal.style.display = "block"
+  }
 
   function handleMenuClick() {
     const dropdown: HTMLElement = document.querySelector('.dropdown')
@@ -54,11 +83,7 @@ function App() {
       menuNormal.style.display = "none"
       menuOpen.style.display = "block"
     } else {
-      dropdown.dataset.open = "false"
-      dropdown.classList.add('close-dropdown')
-      dropdown.classList.remove('open-dropdown')
-      menuOpen.style.display = "none"
-      menuNormal.style.display = "block"
+      resetMobileMenu()
     }
   }
 
@@ -66,14 +91,14 @@ function App() {
   return (
     <div className="App">
       <div className="navbar">
-        <a href='/' className="home-icon">
+        <button onClick={() => handleNavClick("#overview", true)} className="home-icon">
           <img className="home-logo" alt="the snowblossum icon" src={logo}></img>
-        </a>
+        </button>
         <div className="nav-empty"></div>
         <div data-open="false" className="dropdown">
           {Object.keys(pages).map((path, index) => {
             let text = path.substring(1).toUpperCase()
-            return <a key={index} href={path} className='nav'><strong>{text}</strong></a>
+            return <button key={index} onClick={() => handleNavClick(path, true)} className='nav'><strong>{text}</strong></button>
           })}
         </div>
         <button onClick={() => handleMenuClick()} className="nav-links-container-mobile">
@@ -83,7 +108,7 @@ function App() {
         <div className="nav-links-container-desktop">
           {Object.keys(pages).map((path, index) => {
             let text = path.substring(1).toUpperCase()
-            return <a key={index} href={path} className='nav'><strong>{text}</strong></a>
+            return <button key={index} onClick={() => handleNavClick(path)} className='nav'><strong>{text}</strong></button>
           })}
         </div>
       </div>
