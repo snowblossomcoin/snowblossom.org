@@ -10,7 +10,7 @@ function Overview() {
         <h2>
           A Fresh Take on CryptoCurrency
         </h2>
-        <img src='april-ink-12_800.jpg'>
+        <img src='april-ink-12_800.jpg'/>
       </div>
     );
   }
